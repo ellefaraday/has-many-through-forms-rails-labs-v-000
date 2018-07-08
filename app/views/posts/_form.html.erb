@@ -5,7 +5,6 @@
   <%=f.collection_check_boxes :category_ids, Category.all, :id, :name%>
   <%=f.label :content%>
   <%=f.text_area :content%>
-  <%= f.fields_for :categories do |category|%>
-    <%end%>
-
+  
+    <%= f.submit %>
   <%end%>
