@@ -8,6 +8,6 @@ Comments:
   <p><%=comment.content%></p>
 <%end%>
 Users:
-<%=@post.users.unique.each do |user|%>
+<%=@post.users.uniq.each do |user|%>
   <%= link_to user.username, user_path(user)%>
 <%end%>
