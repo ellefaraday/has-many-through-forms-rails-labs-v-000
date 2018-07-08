@@ -13,5 +13,6 @@ Users:
 <%end%>
 
 <%=form_for post.comment.build do |f|%>
-<%=f.label :comment_content%>
-<%=f.text_area :comment_content%>
+  <%=f.label :comment_content%>
+  <%=f.text_area :comment_content%>
+  <%=f.collection_select :user_ids, User.all, :id, :name%>
