@@ -11,3 +11,7 @@ Users:
 <%=@post.users.uniq.each do |user|%>
   <%= link_to user.username, user_path(user)%>
 <%end%>
+
+<%=form_for post.comment.build do |f|%>
+<%=f.label :comment_content%>
+<%=f.text_area :comment_content%>
