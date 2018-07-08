@@ -8,5 +8,5 @@ Comments:
 <%end%>
 Users:
 <%=@post.users.unique.each do |user|%>
-  <%= link_to user.name, user_path(user)%>
+  <%= link_to user.username, user_path(user)%>
 <%end%>
