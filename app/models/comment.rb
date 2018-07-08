@@ -10,5 +10,6 @@ class Comment < ActiveRecord::Base
     else
       user = User.find_or_create_by(params[:comment][:user_id])
       self.user = user
+    end
   end
 end
