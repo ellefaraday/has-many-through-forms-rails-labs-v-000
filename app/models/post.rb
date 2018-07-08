@@ -12,12 +12,12 @@ class Post < ActiveRecord::Base
     end
   end
 
-  def comments_attributes=(comment_attributes)
-    comment_attributes.values.each do |comment_attribute|
-      comment = Comment.find_or_create_by(comment_attribute)
-      self.comments << comment
-    end
-  end
+  #def comments_attributes=(comment_attributes)
+  #  comment_attributes.values.each do |comment_attribute|
+  #    comment = Comment.find_or_create_by(comment_attribute)
+  #    self.comments << comment
+  #  end
+  #end
 
   #def user_attributes=(user_attributes)
   #  user_attributes.values.each do |user_attribute|
