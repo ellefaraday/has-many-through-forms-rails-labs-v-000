@@ -6,6 +6,7 @@
   <%=f.label :content%>
   <%=f.text_area :content%>
   <%=f.fields_for :categories, post.categories.build do |categories_attributes| %>
+    <%=categories_attributes.label :new_category%>
     <%=categories_attributes.text_field :name %>
   <%end%>
   <%= f.submit %>
