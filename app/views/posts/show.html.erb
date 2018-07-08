@@ -6,3 +6,7 @@ Comments:
 <%=@post.comments.each do |comment|%>
   <p><%=comment.content%></p>
 <%end%>
+Users:
+<%=@post.users.unique.each do |user|%>
+  <%= link_to user.name, user_path(user)%>
+<%end%>
