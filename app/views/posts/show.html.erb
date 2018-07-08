@@ -2,3 +2,6 @@
 Categories: <%=@post.categories.each do |category|%>
 <%=category.name%>
 <p><%=@post.content%></p>
+Comments:
+<%=@post.comments.each do |comment|%>
+<p><%=comment.content%></p>
