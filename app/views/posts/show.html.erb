@@ -16,7 +16,7 @@ Users:
   <%=f.label :comment%>
   <%=f.text_area :content%>
   <%=f.collection_select :user_id, User.all, :id, :name%>
-  <%=f.fields_for :users, @post.user.build do |user_attributes| %>
+  <%=f.fields_for :users, @post.users.build do |user_attributes| %>
     <%=user_attributes.label :username%>
     <%=user_attributes.text_field :username %>
     <%=user_attributes.label :email%>
