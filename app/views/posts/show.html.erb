@@ -1,6 +1,6 @@
 <h1><%=@post.title%></h1>
-Categories: <%=@post.categories.each do |category|%>
-<%=category.name%>
+Categories: <%@post.categories.each do |category|%>
+  <%=category.name%>
 <%end%>
 <p><%=@post.content%></p>
 Comments:
