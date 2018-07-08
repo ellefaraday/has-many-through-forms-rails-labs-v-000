@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   has_many :users, through: :comments
 
   def categories_attributes=(category_attributes)
-    category_attributes.each do |catergory_attribute|
+    category_attributes.values.each do |catergory_attribute|
       category = Category.find_or_create_by(catergory_attribute)
       self.categories << category
     end
