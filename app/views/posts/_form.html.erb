@@ -2,6 +2,7 @@
   <%=f.label :title%>
   <%=f.text_field :title%>
   <br><br>
+  <%=f.collection_select :categories
   <%=f.label :content%>
   <%=f.text_area :content%>
   <%= f.fields_for :categories do |category|%>
