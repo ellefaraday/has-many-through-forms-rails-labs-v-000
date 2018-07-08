@@ -4,9 +4,11 @@ class Comment < ActiveRecord::Base
   accepts_nested_attributes_for :user
 
   def user_attributes=(user_attributes)
-    user_attributes.values.each do |user_attribute|
-      user = User.find_or_create_by(user_attribute)
+    if params[:comment][:user_attributes][:username] != ""
+      user = User.find_or_create_by(params[:comment][:user_attributes][:username])
       self.user = user
-    end
+    else
+      user = User.find_or_create_by(params[:comment][:user_id])
+      self.user = user
   end
 end
