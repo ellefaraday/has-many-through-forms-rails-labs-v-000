@@ -1,6 +1,7 @@
 <h1><%=@post.title%></h1>
 Categories: <%=@post.categories.each do |category|%>
 <%=category.name%>
+<%end%>
 <p><%=@post.content%></p>
 Comments:
 <%=@post.comments.each do |comment|%>
