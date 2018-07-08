@@ -7,9 +7,6 @@ class Comment < ActiveRecord::Base
     if user_attributes][:username] != ""
       user = User.find_or_create_by(params[:comment][:user_attributes][:username])
       self.user = user
-    else
-      user = User.find_or_create_by(params[:comment][:user_id])
-      self.user = user
     end
   end
 end
