@@ -8,5 +8,6 @@ class Post < ActiveRecord::Base
     category_attributes.each do |catergory_attribute|
       category = Category.find_or_create(catergory_attribute)
       self.categories << category
+    end
   end
 end
