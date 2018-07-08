@@ -1,2 +1,4 @@
 <h1><%=@post.title%></h1>
+Categories: <%=@post.categories.each do |category|%>
+<%=category.name%>
 <p><%=@post.content%></p>
